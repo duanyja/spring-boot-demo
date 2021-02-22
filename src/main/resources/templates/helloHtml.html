@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello World!</title>
+</head><p th:text="${hello}"></p>
+<body>
+<h1 th:inline="text">Hello.v.2</h1>
+<p th:text="${addtime} ? ${#dates.format(addtime, 'yyyy-MM-dd HH:mm:ss')}"></p>
+<select>
+    <option>请选择用户</option>
+    <option th:each="user:${users}" th:value="${user.id}" th:text="${user.name}">
+    </option>
+</select>
+</body>
+</html>
